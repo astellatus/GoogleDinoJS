@@ -3,6 +3,7 @@
     height: 200px;
     border-bottom: solid black 1px;
     margin: auto;
+    align-items: center;
 }
 
 #dino {

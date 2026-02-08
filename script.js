@@ -1,8 +1,17 @@
+// const wantPlay = confirm("Вы хотите начать играть?");
+// if (!wantPlay) {
+//     document.location.reload();
+// }
+
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
 
 document.addEventListener("keydown", (event) => {
-    jump();
+    if (event.key === "p" || event.key === "з") {
+        alert("Пауза!!!");
+    } else {
+        jump();
+    }
 });
 
 function jump() {
@@ -24,5 +33,6 @@ let isAlive = setInterval(() => {
 
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
         alert("ЛОООХХ ТЫ ПРОИГРАЛ!!!");
+        document.location.reload();
     }
 }, 10);
